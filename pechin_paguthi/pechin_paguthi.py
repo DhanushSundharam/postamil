@@ -130,14 +130,19 @@ def display_vagaigal():
     for i in pos["POSTypes"]:
         print(i)
 def  _vilakkam(gen):
+           user_input = "next"
            while True:
+               
+               
                 try:
-                   user_input = input("Press Enter to see the next item or type 'exit' to quit: ")
+                   
                    print("")
                    if user_input.lower() == "exit":
                       break
                    item = next(gen)
                    print(item)
+                   user_input = input("Press Enter to see the next item or type 'exit' to quit: ")
+
                 except StopIteration:
                      print("End of data.")
                      break        
